@@ -11,7 +11,9 @@
 name: x86_Build
 
 on:
+  #有更新自动编译
   repository_dispatch:
+  #手动编译
   workflow_dispatch:
     inputs:
       ssh:
