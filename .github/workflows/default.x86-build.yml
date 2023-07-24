@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: x86_Build
+name: default_x86_Build
 
 on:
   #自动编译,有更新时触发编译...
