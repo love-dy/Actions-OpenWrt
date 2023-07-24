@@ -11,8 +11,6 @@
 name: default_x86_Build
 
 on:
-  #自动编译,有更新时触发编译...
-  repository_dispatch:
   #手动编译
   workflow_dispatch:
     inputs:
