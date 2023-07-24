@@ -11,7 +11,7 @@
 name: x86_Build
 
 on:
-  #有更新自动编译
+  #自动编译,每天早上4点如有更新自动调用...
   repository_dispatch:
   #手动编译
   workflow_dispatch:
