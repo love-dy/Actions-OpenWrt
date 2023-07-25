@@ -20,6 +20,7 @@
 #echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 #echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
 
+#Linkease x86_64/arm64
 #echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
 #echo 'src-git nas https://github.com/linkease/nas-packages.git;master' >> feeds.conf.default
 #echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >> feeds.conf.default
@@ -31,7 +32,7 @@ git clone --depth=1 --single-branch https://github.com/gngpp/luci-app-design-con
 git clone --depth=1 --single-branch --branch $(echo $OWRT_URL | grep -iq "lede" && echo "18.06" || echo "master") https://github.com/jerrykuku/luci-theme-argon.git
 git clone --depth=1 --single-branch --branch $(echo $OWRT_URL | grep -iq "lede" && echo "18.06" || echo "master") https://github.com/jerrykuku/luci-app-argon-config.git
 
-#Linkease
+#Linkease x86_64/arm64
 #git clone --depth=1 --single-branch https://github.com/linkease/istore.git
 #git clone --depth=1 --single-branch https://github.com/linkease/nas-packages.git
 #git clone --depth=1 --single-branch https://github.com/linkease/nas-packages-luci.git
