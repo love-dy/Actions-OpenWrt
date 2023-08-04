@@ -17,8 +17,8 @@
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 #echo 'src-git kiddin https://github.com/kiddin9/openwrt-packages' >>feeds.conf.default
-#echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
-#echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
+echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
+echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
 
 #Linkease x86_64/arm64
 #echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
@@ -26,11 +26,11 @@
 #echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >> feeds.conf.default
 
 #Design Theme
-git clone --depth=1 --single-branch --branch "main" https://github.com/gngpp/luci-theme-design.git
-git clone --depth=1 --single-branch https://github.com/gngpp/luci-app-design-config.git
+#git clone --depth=1 --single-branch --branch "main" https://github.com/gngpp/luci-theme-design.git
+#git clone --depth=1 --single-branch https://github.com/gngpp/luci-app-design-config.git
 #Argon Theme
-git clone --depth=1 --single-branch --branch "18.06" https://github.com/jerrykuku/luci-theme-argon.git
-git clone --depth=1 --single-branch --branch "18.06" https://github.com/jerrykuku/luci-app-argon-config.git
+#git clone --depth=1 --single-branch --branch "18.06" https://github.com/jerrykuku/luci-theme-argon.git
+#git clone --depth=1 --single-branch --branch "18.06" https://github.com/jerrykuku/luci-app-argon-config.git
 
 #Linkease x86_64/arm64
 #git clone --depth=1 --single-branch https://github.com/linkease/istore.git
@@ -38,20 +38,20 @@ git clone --depth=1 --single-branch --branch "18.06" https://github.com/jerrykuk
 #git clone --depth=1 --single-branch https://github.com/linkease/nas-packages-luci.git
 
 #OpenClash
-git clone --depth=1 --single-branch --branch "dev" https://github.com/vernesong/OpenClash.git
+#git clone --depth=1 --single-branch --branch "dev" https://github.com/vernesong/OpenClash.git
 
 #PassWall
-git clone --depth=1 --single-branch --branch "luci" https://github.com/xiaorouji/openwrt-passwall.git ./pw_luci
-git clone --depth=1 --single-branch --branch "packages" https://github.com/xiaorouji/openwrt-passwall.git ./pw_packages
+#git clone --depth=1 --single-branch --branch "luci" https://github.com/xiaorouji/openwrt-passwall.git ./pw_luci
+#git clone --depth=1 --single-branch --branch "packages" https://github.com/xiaorouji/openwrt-passwall.git ./pw_packages
 
 #git clone --depth=1 --single-branch --branch "luci" https://github.com/xiaorouji/openwrt-passwall.git package/passwall
 #git clone --depth=1 --single-branch --branch "packages" https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
 
 #adguardhome
-git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
+#git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 
 #ssr-plus+
-git clone https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
+#git clone https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
 
 #预置OpenClash内核和GEO数据
 export CORE_VER=https://raw.githubusercontent.com/vernesong/OpenClash/core/dev/core_version
