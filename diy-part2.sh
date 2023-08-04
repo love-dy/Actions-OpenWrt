@@ -23,8 +23,8 @@ sed -i "s/192\.168\.[0-9]*\.[0-9]*/192.168.3.1/g" ./package/base-files/files/bin
 sed -i "s/hostname='.*'/hostname='OpenWRT'/g" ./package/base-files/files/bin/config_generate
 
 #增加主题
-echo "CONFIG_PACKAGE_luci-theme-$OWRT_THEME=y" >> .config
-echo "CONFIG_PACKAGE_luci-app-$OWRT_THEME-config=y" >> .config
+echo "CONFIG_PACKAGE_luci-theme-design=y" >> .config
+echo "CONFIG_PACKAGE_luci-app-design-config=y" >> .config
 
 echo "CONFIG_PACKAGE_luci-theme-argon=y" >> .config
 echo "CONFIG_PACKAGE_luci-app-argon-config=y" >> .config
