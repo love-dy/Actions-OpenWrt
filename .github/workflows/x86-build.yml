@@ -46,15 +46,16 @@ jobs:
     - name: Initialization environment
       env:
         DEBIAN_FRONTEND: noninteractive
-      run: | 
-        sudo -E rm -rf $(cat $GITHUB_WORKSPACE/Depends.txt | sed -n "1{s/\r$//;p;q}")
-        sudo -E apt -yqq update
-        sudo -E apt -yqq purge $(cat $GITHUB_WORKSPACE/Depends.txt | sed -n "2{s/\r$//;p;q}")
-        sudo -E apt -yqq full-upgrade
-        sudo -E apt -yqq install $(cat $GITHUB_WORKSPACE/Depends.txt | sed -n "3{s/\r$//;p;q}")
-        sudo -E apt -yqq autoremove --purge
-        sudo -E apt -yqq autoclean
-        sudo -E apt -yqq clean
+      run: |
+        sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
+        #sudo -E rm -rf $(cat $GITHUB_WORKSPACE/Depends.txt | sed -n "1{s/\r$//;p;q}")
+        sudo -E apt-get -yqq update
+        sudo -E apt-get -yqq purge $(cat $GITHUB_WORKSPACE/Depends.txt | sed -n "2{s/\r$//;p;q}")
+        sudo -E apt-get -yqq full-upgrade
+        sudo -E apt-get -yqq install $(cat $GITHUB_WORKSPACE/Depends.txt | sed -n "3{s/\r$//;p;q}")
+        sudo -E apt-get -yqq autoremove --purge
+        sudo -E apt-get -yqq autoclean
+        sudo -E apt-get -yqq clean
         
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
