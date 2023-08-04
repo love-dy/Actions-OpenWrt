@@ -21,6 +21,9 @@
 #echo 'src-git nas https://github.com/linkease/nas-packages.git;master' >> feeds.conf.default
 #echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >> feeds.conf.default
 
+#删除冲突插件
+rm -rf $(find ./feeds/luci/ -type d -regex ".*\(argon\|design\|openclash\).*")
+
 #Design Theme
 git clone --depth=1 --single-branch --branch "main" https://github.com/gngpp/luci-theme-design.git
 git clone --depth=1 --single-branch https://github.com/gngpp/luci-app-design-config.git
