@@ -13,8 +13,6 @@
 # Modify default IP
 #sed -i 's/192.168.3.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
-#删除冲突插件
-rm -rf $(find ./feeds/luci/ -type d -regex ".*\(argon\|design\|openclash\).*")
 #修改默认主题
 sed -i "s/luci-theme-bootstrap/luci-theme-design/g" $(find ./feeds/luci/collections/ -type f -name "Makefile")
 #修改默认IP地址
