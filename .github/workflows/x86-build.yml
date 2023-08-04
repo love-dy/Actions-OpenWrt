@@ -33,7 +33,7 @@ env:
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
-  TZ: Asia/Shanghai
+  #TZ: Asia/Shanghai
 
 jobs:
   build:
@@ -63,7 +63,8 @@ jobs:
         sudo -E apt -yqq autoclean
         sudo -E apt -yqq clean
         
-        sudo timedatectl set-timezone "$TZ"
+        sudo -E timedatectl set-timezone "Asia/Shanghai"
+        #sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
 
